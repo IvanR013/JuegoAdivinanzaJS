@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/Assets/icons8-dice-16.png" type="image/x-icon">
+    <title>El reto del número</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <h1>Adiviná el número!/Guess the number!</h1>
+    
+    
+    <div class="bienvenida">
+        <p>
+            ¡Bienvenido al juego "Adiviná el número"! Tu objetivo es adivinar un número aleatorio entre 1 y 100.
+            Tienes un máximo de 10 intentos para adivinar el número correcto. 
+            Cada vez que ingreses un número, el juego te dirá si el número es más alto o más bajo que el número objetivo.
+            Si adivinas el número correctamente, ganarás el juego. ¡Buena suerte!
+        </p>
+    </div>
+
+   
+    <p>Introducí un número entre 1 y 100:</p>
+
+    <input type="number" id="numeroEntrada">
+
+    <button onclick="revisarResultado()">Revisar</button>
+    <p id="mensaje"></p>
+
+    <p id="intento">Veces que intentaste/attempts: 0</p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+/* Estilo general del cuerpo */
+body {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif; /* Fuente Work Sans */
+  background-color: burlywood;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo del título */
+h1 {
+  color: #333;
+  font-family: 'Work Sans', sans-serif; 
+  margin-top: 20px; 
+}
+
+/* Cuadro de bienvenida */
+.bienvenida {
+  background-color: #fff; 
+  border: 2px solid #4CAF50;
+  border-radius: 10px; 
+  padding: 20px; 
+  margin: 20px auto; 
+  width: 80%; 
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  font-family: 'Work Sans', sans-serif; 
+}
+
+/* Estilo de los inputs numéricos y otros inputs */
+input[type="number"] {
+  padding: 10px; 
+  font-size: 16px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  width: 80%; 
+  max-width: 300px; 
+  box-sizing: border-box; 
+}
+
+/* Estilo de los botones */
+button {
+  padding: 10px 20px; 
+  background-color: #4CAF50; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  margin: 10px 0; 
+  transition: background-color 0.3s; 
+}
+
+/* Efecto hover para los botones */
+button:hover {
+  background-color: #45a049; 
+}
+
+/* Estilo del mensaje */
+#mensaje {
+  color: #333; 
+  font-family: 'Work Sans', sans-serif; 
+  font-size: 18px; 
+  margin-top: 20px; 
+}
