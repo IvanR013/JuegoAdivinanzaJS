@@ -2,7 +2,7 @@
 
 ## Descripción
 
-**Adivinar el Número**, es un sencillo juego web en el que el usuario debe adivinar un número aleatorio entre 1 y 100. El juego proporciona pistas sobre si el número ingresado es mayor o menor que el número objetivo y muestra el número de intentos. Si se superan los 10 intentos, el juego termina.
+**Adivinar el Número**, es un sencillo juego web en el que el usuario debe adivinar un número aleatorio entre 1 y 100. El juego te proporciona pistas sobre si el número ingresado es mayor o menor que el número objetivo y muestra el número de intentos. Si se superan los 10 intentos, el juego termina.
 
 ## Stack Incluido
 
