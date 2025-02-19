@@ -30,7 +30,7 @@ Este proyecto utiliza las siguientes tecnologías:
 
 5. **Contador de Intentos y Límite:**
    - Cada vez que el usuario intenta adivinar el número, el contador de intentos se incrementa y se muestra en la pantalla.
-   - Si el número de intentos alcanza o supera los 10, el juego termina, se muestra el número objetivo y el campo de entrada se desactiva.
+   - Si el número de intentos alcanza o supera los 13, el juego termina, se muestra el número objetivo y el campo de entrada se desactiva.
 
 ## Cómo Empezar
 
