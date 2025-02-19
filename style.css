@@ -2,9 +2,24 @@
 body {
   text-align: center;
   font-family: 'Work Sans', sans-serif; /* Fuente Work Sans */
-  background-color: burlywood;
   margin: 0;
   padding: 0;
+  overflow: hidden; /* Para evitar scrollbars */
+}
+
+#background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Colocar el fondo detrás del contenido */
+}
+
+/* Estilo del contenedor de contenido */
+.contenido {
+  position: relative;
+  z-index: 1; /* Colocar el contenido delante del fondo */
 }
 
 /* Estilo del título */
@@ -42,7 +57,7 @@ input[type="number"] {
 button {
   padding: 10px 20px; 
   background-color: #4CAF50; 
-  color: white; 
+  color: rgb(255, 255, 255); 
   border: none; 
   border-radius: 5px; 
   font-size: 16px; 
