@@ -2,7 +2,7 @@
 
 ## Descripción
 
-**Adivinar el Número**, es un sencillo juego web en el que el usuario debe adivinar un número aleatorio entre 1 y 100. El juego te proporciona pistas sobre si el número ingresado es mayor o menor que el número objetivo y muestra el número de intentos. Si se superan los 10 intentos, el juego termina.
+**Adivinar el Número**, es un sencillo juego web en el que el usuario debe adivinar un número aleatorio entre 1 y 100. El juego te proporciona pistas sobre si el número ingresado es mayor o menor que el número objetivo y muestra el número de intentos. Si se superan los 13 intentos, el juego termina.
 
 ## Stack Incluido
 
@@ -32,11 +32,3 @@ Este proyecto utiliza las siguientes tecnologías:
    - Cada vez que el usuario intenta adivinar el número, el contador de intentos se incrementa y se muestra en la pantalla.
    - Si el número de intentos alcanza o supera los 13, el juego termina, se muestra el número objetivo y el campo de entrada se desactiva.
 
-## Cómo Empezar
-
-Para comenzar con el juego, sigue estos pasos:
-
-1. **Clona el Repositorio:**
-
-   
-   git clone https://github.com/IvanR013/JuegoAdivinanzaJS.git
