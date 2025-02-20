@@ -25,7 +25,7 @@ function revisarResultado() {
     let numeroIngresado = parseInt(numeroEntrada.value); //el parseo a integer es porque la variable suelta el valor en string.
 
     if(intentos >= 13){
-        mensaje.textContent = 'Se te acabaron los intentos. Fin del Juego.'; 
+        mensaje.textContent = 'Se te acabaron los intentos. Game Over (Siempre quise escribir eso en un juego mío).'; 
         mensaje.style.color = 'red';
         numeroEntrada.disabled = true; 
         mensaje2.textContent = 'Recargando el juego... Mucha suerte.'; // Mensaje que aparece cuando se acaban los intentos.
@@ -33,7 +33,7 @@ function revisarResultado() {
         
         setTimeout(()=>{
             location.reload(); // Recargo la página después de 2 segundos y evito que se ejecute el resto de la lógica del juego.
-        }, 2000);
+        }, 2800);
 
         return;
 
