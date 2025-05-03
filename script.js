@@ -23,9 +23,14 @@ function revisarResultado() {
     intento.textContent = 'Veces que intentaste: ' + intentos;
 
     let numeroIngresado = parseInt(numeroEntrada.value); //el parseo a integer es porque la variable suelta el valor en string.
-
+    if(intentos == 12)
+    {
+        mensaje.textContent = 'Te queda el último intento MUAJAJAJAJ..... 😈'; 
+        mensaje.style.color = 'red';
+    }
+    
     if(intentos >= 13){
-        mensaje.textContent = 'Se te acabaron los intentos. Game Over (Siempre quise escribir eso en un juego mío).'; 
+        mensaje.textContent = 'Se te acabaron los intentos. Game Over👾 (Siempre quise poner eso en un juego mío).'; 
         mensaje.style.color = 'red';
         numeroEntrada.disabled = true; 
         mensaje2.textContent = 'Recargando el juego... Mucha suerte.'; // Mensaje que aparece cuando se acaban los intentos.
@@ -41,14 +46,14 @@ function revisarResultado() {
 
     if (numeroIngresado < 1 || numeroIngresado > 100 || isNaN(numeroIngresado)) {  
         
-        mensaje.textContent = 'Por favor, introducí un número válido entre 1 y 100.';
+        mensaje.textContent = 'Menos mal que te dije un número entre 1 y 100. 😑';
         mensaje.style.color = 'red';
-        return 
+        return; 
     }
     if (numeroIngresado === numeroRandom) { // el msje por si adivinás el número.
         
-        mensaje.textContent = '¡Felicitaciones!, ganaste el juego.';
-        mensaje2.textContent = 'Recargando el juego... Muy bien!';
+        mensaje.textContent = '¡Felicitaciones!, ganaste el juego. 🎉🎉🎉🎊';
+        mensaje2.textContent = 'Recargando el juego... Muy bien! 🤩';
         mensaje.style.color = 'green';
         mensaje2.style.color = 'black';
         numeroEntrada.disabled = true;
@@ -59,12 +64,12 @@ function revisarResultado() {
     
     } else if (numeroIngresado < numeroRandom) { // Por si el número que ingresaste es menor al que te sale.
         
-        mensaje.textContent = 'El número es más alto!';
+        mensaje.textContent = 'El número es más alto! ⬆⬆';
         mensaje.style.color = 'red';
         
     }else {
 
-        mensaje.textContent = 'El número es más bajo!'; // Por si no se cumple la condición del else de arriba.
+        mensaje.textContent = 'El número es más bajo! ⬇⬇'; // Por si no se cumple la condición del else de arriba.
         mensaje.style.color = 'red';
     }
 }
