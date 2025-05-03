@@ -78,3 +78,11 @@ button:hover {
   font-size: 18px; 
   margin-top: 20px; 
 }
+
+#mensajeMalvado {
+  color: #000000; 
+  font-family: 'Work Sans', sans-serif; 
+  font-size: 18px; 
+  margin-top: 20px; 
+}
+

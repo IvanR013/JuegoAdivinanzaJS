@@ -8,9 +8,11 @@ let numeroEntrada = document.getElementById('numeroEntrada');
 
 let mensaje = document.getElementById('mensaje');
 
-let mensaje2 = document.getElementById('mensaje2');   
+let AdvertenciaMalvada = document.getElementById('mensajeMalvado');
 
-let intento = document.getElementById('intento');   
+let mensaje2 = document.getElementById('mensaje2');
+
+let intento = document.getElementById('intento');
 
 let intentos = 0; // Acá definimos la variable del contador de intentos.
 
@@ -18,25 +20,27 @@ let intentos = 0; // Acá definimos la variable del contador de intentos.
 
 function revisarResultado() {
 
-    intentos ++; // Esto sirve para que el contador avance hacia adelante.
-    
+    intentos++; // Esto sirve para que el contador avance hacia adelante.
+
     intento.textContent = 'Veces que intentaste: ' + intentos;
 
     let numeroIngresado = parseInt(numeroEntrada.value); //el parseo a integer es porque la variable suelta el valor en string.
-    if(intentos == 12)
-    {
-        mensaje.textContent = 'Te queda el último intento MUAJAJAJAJ..... 😈'; 
-        mensaje.style.color = 'red';
+    if (intentos === 12) {
+        AdvertenciaMalvada.textContent = 'Te queda el último intento MUAJAJAJAJ..... 😈';
+        AdvertenciaMalvada.style.color = 'red';
+        setTimeout(() => {
+            AdvertenciaMalvada.textContent = ''; // Elimino el mensaje malo después de 2 segundos.
+        }, 2000);
     }
-    
-    if(intentos >= 13){
-        mensaje.textContent = 'Se te acabaron los intentos. Game Over👾 (Siempre quise poner eso en un juego mío).'; 
+
+    if (intentos >= 13) {
+        mensaje.textContent = 'Se te acabaron los intentos. Game Over👾 (Siempre quise poner eso en un juego mío).';
         mensaje.style.color = 'red';
-        numeroEntrada.disabled = true; 
+        numeroEntrada.disabled = true;
         mensaje2.textContent = 'Recargando el juego... Mucha suerte.'; // Mensaje que aparece cuando se acaban los intentos.
         mensaje2.style.color = 'black';
-        
-        setTimeout(()=>{
+
+        setTimeout(() => {
             location.reload(); // Recargo la página después de 2 segundos y evito que se ejecute el resto de la lógica del juego.
         }, 2800);
 
@@ -44,30 +48,30 @@ function revisarResultado() {
 
     }
 
-    if (numeroIngresado < 1 || numeroIngresado > 100 || isNaN(numeroIngresado)) {  
-        
+    if (numeroIngresado < 1 || numeroIngresado > 100 || isNaN(numeroIngresado)) {
+
         mensaje.textContent = 'Menos mal que te dije un número entre 1 y 100. 😑';
         mensaje.style.color = 'red';
-        return; 
+        return;
     }
     if (numeroIngresado === numeroRandom) { // el msje por si adivinás el número.
-        
+
         mensaje.textContent = '¡Felicitaciones!, ganaste el juego. 🎉🎉🎉🎊';
         mensaje2.textContent = 'Recargando el juego... Muy bien! 🤩';
         mensaje.style.color = 'green';
         mensaje2.style.color = 'black';
         numeroEntrada.disabled = true;
 
-        setTimeout(()=>{
-            location.reload(); 
+        setTimeout(() => {
+            location.reload();
         }, 2000); // Espero 2 segundos antes de recargar la página.
-    
+
     } else if (numeroIngresado < numeroRandom) { // Por si el número que ingresaste es menor al que te sale.
-        
+
         mensaje.textContent = 'El número es más alto! ⬆⬆';
         mensaje.style.color = 'red';
-        
-    }else {
+
+    } else {
 
         mensaje.textContent = 'El número es más bajo! ⬇⬇'; // Por si no se cumple la condición del else de arriba.
         mensaje.style.color = 'red';
